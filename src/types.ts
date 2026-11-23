@@ -43,7 +43,7 @@ export interface Question {
   imageSvg?: string; // Ilustrasi SVG presisi untuk soal bergambar
   imageUrl?: string; // URL gambar opsional jika diedit guru
   imageCaption?: string; // Keterangan gambar
-  options?: OptionItem[]; // Untuk 'pg' (4 opsi) dan 'pgk' (4 opsi)
+  options?: OptionItem[]; // Untuk 'pg' (4 opsi) dan 'pgk' (3 opsi)
   statements?: StatementItem[]; // Untuk 'pgk_kategori' (3 pernyataan)
   correctAnswer?: string | string[]; // string untuk 'pg' (e.g. 'B'), array untuk 'pgk' (e.g. ['A', 'C'])
   difficulty: Difficulty;

@@ -137,7 +137,7 @@ export function downloadStudentResultPDF(result: ExamResult): void {
   y += 8;
 
   // Baris-baris tabel
-  const totalQuestionsCount = (result.benar || 0) + (result.salah || 0) > 0 ? (result.benar || 0) + (result.salah || 0) : 30;
+  const totalQuestionsCount = (result.benar || 0) + (result.salah || 0) > 0 ? (result.benar || 0) + (result.salah || 0) : 40;
   const integrityStatus = result.submissionReason === 'violation_limit'
     ? 'Dihentikan Otomatis (3x Pelanggaran Pindah Tab)'
     : result.violationsCount && result.violationsCount > 0
@@ -1091,6 +1091,10 @@ export function downloadAnalisisButirPDF(results: ExamResult[], questions: Quest
   const remainingForQuestions = contentWidth - fixedColsWidth; // 182mm
   const qColW = Math.min(6.5, remainingForQuestions / questions.length);
 
+  const isDenseMatrix = questions.length > 32;
+  const qHeaderFontSize = isDenseMatrix ? 5.5 : 7;
+  const qCellFontSize = isDenseMatrix ? 5.6 : 6.8;
+
   const drawTableHeader = (curY: number) => {
     doc.setFillColor(30, 58, 138);
     doc.rect(marginLeft, curY, contentWidth, 7, 'F');
@@ -1107,12 +1111,14 @@ export function downloadAnalisisButirPDF(results: ExamResult[], questions: Quest
     curX += colNamaW;
 
     // Kolom Butir Soal 1..N
+    doc.setFontSize(qHeaderFontSize);
     questions.forEach((_, qIdx) => {
       doc.text(`S${qIdx + 1}`, curX + qColW / 2, curY + 4.8, { align: 'center' });
       curX += qColW;
     });
 
     // Kolom Hasil
+    doc.setFontSize(7);
     doc.text('Skor', curX + colSkorW / 2, curY + 4.8, { align: 'center' });
     curX += colSkorW;
     doc.text('Nilai', curX + colNilaiW / 2, curY + 4.8, { align: 'center' });
@@ -1167,6 +1173,7 @@ export function downloadAnalisisButirPDF(results: ExamResult[], questions: Quest
     curX += colNamaW;
 
     // Respon Butir Soal (1 = Benar Hijau, 0.5 = Sebagian Kuning, 0 = Salah Merah)
+    doc.setFontSize(qCellFontSize);
     questions.forEach((q) => {
       const resp = studentResponses[q.id];
       const isBenar = resp && resp.status === 'benar';
@@ -1196,6 +1203,7 @@ export function downloadAnalisisButirPDF(results: ExamResult[], questions: Quest
     });
 
     // Total Skor
+    doc.setFontSize(6.8);
     doc.setFont('helvetica', 'bold');
     doc.setTextColor(30, 41, 59);
     doc.text(String(r.benar ?? 0), curX + colSkorW / 2, y + 4.2, { align: 'center' });
@@ -1268,6 +1276,7 @@ export function downloadAnalisisButirPDF(results: ExamResult[], questions: Quest
     const labelSpanW = colNoW + colAbsenW + colNamaW;
     doc.text(sRow.label, marginLeft + labelSpanW - 2, y + 3.8, { align: 'right' });
 
+    doc.setFontSize(isDenseMatrix ? 5.2 : 6.8);
     let curX = marginLeft + labelSpanW;
     questions.forEach((_, qIdx) => {
       const val = sRow.valGetter(qIdx);

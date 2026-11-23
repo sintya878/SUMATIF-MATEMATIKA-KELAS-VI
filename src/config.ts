@@ -9,7 +9,7 @@ export const CONFIG = {
   KOTA: "Jembrana",
   KELAS: "VI",
   MATA_PELAJARAN: "MATEMATIKA",
-  MATERI: "Rasio",
+  MATERI: "Pecahan, Desimal & Rasio",
   GURU: "Ni Luh Putu Sinthiya Prabawati, S.Pd., Gr.",
   NIP_GURU: "198901212022212006",
   KEPALA_SEKOLAH: "Yuliana, S.Pd., M.Pd.",

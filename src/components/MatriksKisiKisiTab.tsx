@@ -197,7 +197,7 @@ export const MatriksKisiKisiTab: React.FC<MatriksKisiKisiTabProps> = ({ question
             </div>
           </div>
           <span className="text-[11px] text-slate-400 mt-3 pt-2 border-t border-slate-100 block">
-            Proporsi L1=27%, L2=53%, L3=20% (HOTS)
+            Proporsi: {stats.levelDistribution.map((l) => `${l.level}=${l.percentage}%`).join(', ')}
           </span>
         </div>
 
@@ -275,7 +275,9 @@ export const MatriksKisiKisiTab: React.FC<MatriksKisiKisiTabProps> = ({ question
             </div>
           </div>
           <span className="text-[11px] text-slate-400 mt-3 pt-2 border-t border-slate-100 block">
-            18 PG Tunggal • 3 PGK • 9 PGK Kategori (B/S)
+            {stats.typeDistribution.find((t) => t.type === 'pg')?.count ?? 0} PG (4 Opsi) •{' '}
+            {stats.typeDistribution.find((t) => t.type === 'pgk')?.count ?? 0} PGK (3 Opsi) •{' '}
+            {stats.typeDistribution.find((t) => t.type === 'pgk_kategori')?.count ?? 0} PGK Kategori (B/S)
           </span>
         </div>
       </div>

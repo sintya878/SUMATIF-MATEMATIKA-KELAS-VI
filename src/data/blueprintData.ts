@@ -2,7 +2,8 @@ import { Question, QuestionBlueprint, CognitiveLevel, Difficulty } from '../type
 
 /**
  * Data Acuan Matriks Kisi-Kisi Penulisan Soal Tes Sumatif
- * Kurikulum Merdeka - Fase C (Kelas VI) Mata Pelajaran Matematika — Lingkup Materi: Rasio
+ * Kurikulum Merdeka - Fase C (Kelas VI) Mata Pelajaran Matematika
+ * Disusun 1-to-1 sesuai kisikisimat_d983b300.pdf (40 Butir Soal)
  */
 
 export interface BlueprintDefinition {
@@ -13,275 +14,357 @@ export interface BlueprintDefinition {
   bobotSkor: number;
 }
 
-// Peta acuan default 30 butir soal materi Rasio Kurikulum Merdeka
+// Peta acuan 40 butir soal sesuai dokumen kisi-kisi yang diunggah
 export const DEFAULT_BLUEPRINT_MAP: Record<number, BlueprintDefinition> = {
   1: {
     elemen: 'Bilangan',
     tujuanPembelajaran:
-      'Peserta didik dapat memahami konsep rasio dan menyatakan perbandingan dua besaran sejenis dalam bentuk paling sederhana.',
+      'TP1.1 Memahami perkalian pecahan dengan bilangan asli dan menghitung hasilnya',
     indikatorSoal:
-      'Disajikan gambar dua kelompok buah (6 apel dan 4 jeruk), peserta didik dapat menentukan rasio paling sederhana banyak apel terhadap jeruk.',
+      'Murid menghitung hasil perkalian pecahan biasa dengan bilangan bulat.',
     levelKognitif: 'L1',
     bobotSkor: 1,
   },
   2: {
     elemen: 'Bilangan',
     tujuanPembelajaran:
-      'Peserta didik dapat menyatakan rasio bagian terhadap keseluruhan (part-to-whole) secara tepat.',
+      'TP1.1 Memahami perkalian pecahan dengan bilangan asli dan menghitung hasilnya',
     indikatorSoal:
-      'Disajikan data banyak spidol biru dan spidol hitam dalam kotak pensil, peserta didik dapat menentukan rasio paling sederhana spidol biru terhadap seluruh spidol.',
-    levelKognitif: 'L1',
+      'Disajikan ilustrasi cerita belanja, murid menghitung total berat belanjaan pecahan.',
+    levelKognitif: 'L2',
     bobotSkor: 1,
   },
   3: {
     elemen: 'Bilangan',
     tujuanPembelajaran:
-      'Peserta didik dapat menyederhanakan rasio dua besaran dari representasi visual.',
+      'TP1.2 Memahami pembagian pecahan dengan bilangan asli dan menghitung hasilnya',
     indikatorSoal:
-      'Disajikan gambar kumpulan kelereng biru dan merah, peserta didik dapat menentukan rasio paling sederhana kelereng merah terhadap kelereng biru.',
+      'Murid menghitung hasil pembagian pecahan biasa dengan bilangan bulat.',
     levelKognitif: 'L1',
     bobotSkor: 1,
   },
   4: {
-    elemen: 'Aljabar',
+    elemen: 'Bilangan',
     tujuanPembelajaran:
-      'Peserta didik dapat menggunakan konsep kesamaan rasio (rasio setara) untuk menyelesaikan masalah kontekstual.',
+      'TP1.2 Memahami pembagian pecahan dengan bilangan asli dan menghitung hasilnya',
     indikatorSoal:
-      'Disajikan rasio campuran sirup dan air serta takaran sirup yang digunakan, peserta didik dapat menentukan banyak air yang dibutuhkan agar rasa tetap sama.',
+      'Disajikan pembagian pita, murid menentukan panjang potongan pita pecahan.',
     levelKognitif: 'L2',
     bobotSkor: 1,
   },
   5: {
-    elemen: 'Aljabar',
+    elemen: 'Bilangan',
     tujuanPembelajaran:
-      'Peserta didik dapat menyelesaikan masalah perbandingan menggunakan model pita (bar model).',
+      'TP1.3 Mengubah pecahan menjadi desimal serta membandingkan dan mengurutkan bilangan desimal',
     indikatorSoal:
-      'Disajikan gambar model pita Pita A (3 bagian) dan Pita B (5 bagian) beserta panjang totalnya, peserta didik dapat menentukan panjang Pita B.',
-    levelKognitif: 'L2',
-    bobotSkor: 1,
-  },
-  6: {
-    elemen: 'Aljabar',
-    tujuanPembelajaran:
-      'Peserta didik dapat menentukan rasio satuan (harga per unit) untuk menyelesaikan masalah jual beli.',
-    indikatorSoal:
-      'Disajikan harga sejumlah buku tulis di koperasi, peserta didik dapat menghitung total harga untuk jumlah buku tulis yang berbeda.',
+      'Murid mengubah bentuk pecahan biasa ke bentuk desimal.',
     levelKognitif: 'L1',
     bobotSkor: 1,
   },
-  7: {
-    elemen: 'Pengukuran',
+  6: {
+    elemen: 'Bilangan',
     tujuanPembelajaran:
-      'Peserta didik dapat menyetarakan satuan panjang sebelum menentukan rasio paling sederhana.',
+      'TP1.3 Mengubah pecahan menjadi desimal serta membandingkan dan mengurutkan bilangan desimal',
     indikatorSoal:
-      'Disajikan panjang dua utas tali dalam satuan berbeda (meter dan sentimeter), peserta didik dapat menyederhanakan rasio panjang kedua tali.',
+      'Murid membandingkan dua bilangan desimal sampai per seratus.',
     levelKognitif: 'L2',
+    bobotSkor: 1,
+  },
+  7: {
+    elemen: 'Bilangan',
+    tujuanPembelajaran: 'TP1.4 Mengubah pecahan menjadi desimal',
+    indikatorSoal:
+      'Murid menentukan bentuk desimal dari pecahan berpenyebut kelipatan 10.',
+    levelKognitif: 'L1',
     bobotSkor: 1,
   },
   8: {
     elemen: 'Bilangan',
     tujuanPembelajaran:
-      'Peserta didik dapat menentukan rasio volume dua zat cair dari gambar alat ukur.',
+      'TP1.5 Membandingkan bilangan desimal sampai sepersepuluh',
     indikatorSoal:
-      'Disajikan gambar dua gelas ukur berisi cat biru dan cat kuning, peserta didik dapat menentukan rasio paling sederhana volume kedua cat.',
-    levelKognitif: 'L1',
+      'Murid mengurutkan beberapa bilangan desimal dari yang terkecil.',
+    levelKognitif: 'L2',
     bobotSkor: 1,
   },
   9: {
     elemen: 'Aljabar',
     tujuanPembelajaran:
-      'Peserta didik dapat menentukan nilai salah satu besaran jika diketahui rasio dan selisihnya.',
+      'TP2.1 Memahami konsep rasio dan penggunaan bahasa rasio',
     indikatorSoal:
-      'Disajikan rasio umur Kakak dan Adik serta selisih umur mereka, peserta didik dapat menentukan umur Adik.',
-    levelKognitif: 'L2',
+      'Murid mengidentifikasi pernyataan yang menyatakan konsep rasio.',
+    levelKognitif: 'L1',
     bobotSkor: 1,
   },
   10: {
     elemen: 'Aljabar',
     tujuanPembelajaran:
-      'Peserta didik dapat menentukan nilai salah satu kelompok jika diketahui rasio dan jumlah keseluruhannya.',
+      'TP2.1 Memahami konsep rasio dan penggunaan bahasa rasio',
     indikatorSoal:
-      'Disajikan jumlah total siswa kelas VI dan rasio siswa laki-laki terhadap perempuan, peserta didik dapat menghitung banyak siswa perempuan.',
+      'Disajikan data buah, murid menyatakan perbandingan dalam bentuk rasio.',
     levelKognitif: 'L2',
     bobotSkor: 1,
   },
   11: {
-    elemen: 'Geometri',
+    elemen: 'Aljabar',
     tujuanPembelajaran:
-      'Peserta didik dapat menentukan rasio dua daerah pada model visual grid persegi.',
+      'TP2.2 Menentukan kesamaan rasio menggunakan tabel rasio',
     indikatorSoal:
-      'Disajikan gambar papan kotak 4 × 5 dengan bagian yang diarsir dan tidak diarsir, peserta didik dapat menentukan rasio paling sederhana kotak diarsir terhadap tidak diarsir.',
-    levelKognitif: 'L1',
+      'Disajikan tabel rasio rumpang, murid menentukan nilai yang belum diketahui.',
+    levelKognitif: 'L2',
     bobotSkor: 1,
   },
   12: {
-    elemen: 'Pengukuran',
+    elemen: 'Aljabar',
     tujuanPembelajaran:
-      'Peserta didik dapat menerapkan konsep skala sebagai bentuk rasio jarak pada peta terhadap jarak sebenarnya.',
+      'TP2.2 Menentukan kesamaan rasio menggunakan tabel rasio',
     indikatorSoal:
-      'Disajikan jarak dua desa pada peta dan skala peta, peserta didik dapat menghitung jarak sebenarnya dalam satuan kilometer.',
-    levelKognitif: 'L1',
+      'Murid menganalisis pasangan rasio yang bernilai sama.',
+    levelKognitif: 'L3',
     bobotSkor: 1,
   },
   13: {
-    elemen: 'Pengukuran',
+    elemen: 'Aljabar',
     tujuanPembelajaran:
-      'Peserta didik dapat menentukan skala gambar denah dari ukuran gambar dan ukuran sebenarnya.',
+      'TP2.3 Menentukan rasio bagian terhadap bagian dan bagian terhadap keseluruhan',
     indikatorSoal:
-      'Disajikan panjang kolam renang sebenarnya (meter) dan panjang pada gambar (cm), peserta didik dapat menentukan skala gambar denah.',
+      'Disajikan perbandingan jumlah siswa laki-laki dan perempuan, murid menentukan rasio bagian ke bagian.',
     levelKognitif: 'L2',
     bobotSkor: 1,
   },
   14: {
     elemen: 'Aljabar',
     tujuanPembelajaran:
-      'Peserta didik dapat menyelesaikan masalah perbandingan tiga besaran yang diketahui jumlah totalnya.',
+      'TP2.3 Menentukan rasio bagian terhadap bagian dan bagian terhadap keseluruhan',
     indikatorSoal:
-      'Disajikan rasio tabungan tiga anak dan jumlah total tabungan mereka, peserta didik dapat menentukan besar tabungan salah satu anak.',
-    levelKognitif: 'L2',
+      'Disajikan jumlah kelereng merah dan biru, murid menentukan rasio kelereng merah terhadap total seluruh kelereng.',
+    levelKognitif: 'L3',
     bobotSkor: 1,
   },
   15: {
-    elemen: 'Pengukuran',
-    tujuanPembelajaran:
-      'Peserta didik dapat menyelesaikan masalah laju perubahan jarak terhadap waktu (kecepatan tetap).',
+    elemen: 'Aljabar',
+    tujuanPembelajaran: 'TP2.4 Menentukan rasio satuan',
     indikatorSoal:
-      'Disajikan jarak tempuh sepeda motor dalam waktu tertentu, peserta didik dapat menghitung jarak tempuh untuk durasi waktu yang berbeda.',
+      'Murid menentukan nilai rasio satuan dari harga barang per unit.',
     levelKognitif: 'L2',
     bobotSkor: 1,
   },
   16: {
-    elemen: 'Aljabar',
-    tujuanPembelajaran:
-      'Peserta didik dapat menggunakan rasio setara dalam memperbesar takaran resep adonan.',
+    elemen: 'Pengukuran',
+    tujuanPembelajaran: 'TP2.4 Menentukan rasio satuan',
     indikatorSoal:
-      'Disajikan kartu takaran resep (tepung terigu dan gula pasir), peserta didik dapat menghitung berat gula yang dibutuhkan untuk 1 kg tepung terigu.',
-    levelKognitif: 'L2',
+      'Disajikan jarak tempuh dan waktu, murid menentukan rasio kecepatan per satuan waktu.',
+    levelKognitif: 'L3',
     bobotSkor: 1,
   },
   17: {
-    elemen: 'Aljabar',
+    elemen: 'Bilangan',
     tujuanPembelajaran:
-      'Peserta didik dapat membandingkan dua rasio harga satuan (unit rate) untuk menentukan pilihan yang lebih ekonomis.',
+      'TP1.1 & TP1.2 Perkalian & Pembagian Pecahan',
     indikatorSoal:
-      'Disajikan dua paket harga susu kemasan dengan isi dan harga berbeda, peserta didik dapat menganalisis selisih harga per botol dan menentukan paket yang lebih murah.',
+      'Murid menghitung hasil operasi hitung perkalian dan pembagian pecahan dengan bilangan asli.',
     levelKognitif: 'L3',
     bobotSkor: 1,
   },
   18: {
-    elemen: 'Aljabar',
+    elemen: 'Bilangan',
     tujuanPembelajaran:
-      'Peserta didik dapat menganalisis hubungan berbalik nilai antara kecepatan dan waktu tempuh pada jarak tetap.',
+      'TP1.3 & TP1.4 Konversi & Urutan Bilangan Desimal',
     indikatorSoal:
-      'Disajikan waktu tempuh dan kecepatan awal kendaraan, peserta didik dapat menentukan waktu tempuh baru jika kecepatan ditingkatkan.',
-    levelKognitif: 'L3',
+      'Murid menentukan posisi bilangan desimal pada garis bilangan sederhana.',
+    levelKognitif: 'L2',
     bobotSkor: 1,
   },
   19: {
-    elemen: 'Geometri',
+    elemen: 'Aljabar',
     tujuanPembelajaran:
-      'Peserta didik dapat menganalisis ukuran denah berskala untuk menentukan ukuran sebenarnya, rasio, dan keliling bangun datar.',
+      'TP2.1 & TP2.3 Konsep Rasio Bagian & Keseluruhan',
     indikatorSoal:
-      'Disajikan gambar denah taman sekolah berskala 1 : 300, peserta didik dapat memilih semua pernyataan benar terkait panjang, lebar, rasio, dan keliling sebenarnya.',
-    levelKognitif: 'L2',
+      'Disajikan komposisi adonan kue, murid menentukan rasio terigu terhadap total bahan.',
+    levelKognitif: 'L3',
     bobotSkor: 1,
   },
   20: {
     elemen: 'Aljabar',
     tujuanPembelajaran:
-      'Peserta didik dapat menganalisis rasio tiga komponen bahan campuran terhadap bagian dan keseluruhan.',
+      'TP2.2 & TP2.4 Tabel Rasio & Rasio Satuan',
     indikatorSoal:
-      'Disajikan takaran volume sari mangga, sari jeruk, dan air mineral dalam 1 teko, peserta didik dapat memilih semua pernyataan benar mengenai rasio dan pelipatan resep.',
-    levelKognitif: 'L2',
-    bobotSkor: 1,
-  },
-  21: {
-    elemen: 'Analisis Data dan Peluang',
-    tujuanPembelajaran:
-      'Peserta didik dapat menafsirkan diagram batang dan menentukan berbagai rasio antar kategori data.',
-    indikatorSoal:
-      'Disajikan diagram batang koleksi buku pojok baca, peserta didik dapat memilih semua pernyataan rasio yang benar antar jenis buku dan terhadap total buku.',
+      'Murid menghitung jumlah bahan resep menggunakan tabel rasio satuan.',
     levelKognitif: 'L3',
     bobotSkor: 1,
   },
-  22: {
-    elemen: 'Geometri',
+  21: {
+    elemen: 'Bilangan',
     tujuanPembelajaran:
-      'Peserta didik dapat menganalisis dimensi persegi panjang menggunakan rasio panjang dan lebar.',
+      'TP1.1 Memahami perkalian pecahan dengan bilangan asli',
     indikatorSoal:
-      'Disajikan sketsa kolam ikan dengan rasio panjang : lebar = 5 : 3 dan panjang diketahui, peserta didik dapat menilai kebenaran pernyataan lebar, selisih, dan luas kolam.',
+      'Disajikan cerita panjang kain, murid menghitung total perkalian pecahan.',
+    levelKognitif: 'L2',
+    bobotSkor: 1,
+  },
+  22: {
+    elemen: 'Bilangan',
+    tujuanPembelajaran:
+      'TP1.2 Memahami pembagian pecahan dengan bilangan asli',
+    indikatorSoal:
+      'Disajikan cerita pembagian susu botol, murid menghitung sisa atau hasil bagi pecahan.',
     levelKognitif: 'L2',
     bobotSkor: 1,
   },
   23: {
-    elemen: 'Aljabar',
+    elemen: 'Bilangan',
     tujuanPembelajaran:
-      'Peserta didik dapat menentukan nilai besaran lain dan jumlah keseluruhan dari rasio tiga kelompok.',
+      'TP1.5 Membandingkan bilangan desimal sampai sepersepuluh',
     indikatorSoal:
-      'Disajikan rasio kelereng tiga anak dan jumlah milik satu anak, peserta didik dapat menilai kebenaran (Benar/Salah) pernyataan banyak kelereng anak lain dan jumlah total.',
+      'Murid menentukan tanda ketidaksamaan yang tepat antara dua bilangan desimal.',
     levelKognitif: 'L2',
     bobotSkor: 1,
   },
   24: {
     elemen: 'Aljabar',
     tujuanPembelajaran:
-      'Peserta didik dapat membandingkan harga satuan dua paket barang dari informasi visual.',
+      'TP2.2 Menentukan kesamaan rasio menggunakan tabel rasio',
     indikatorSoal:
-      'Disajikan gambar daftar dua paket harga pensil koperasi, peserta didik dapat menentukan kebenaran (Benar/Salah) harga satuan tiap paket dan perbandingan kehematannya.',
-    levelKognitif: 'L1',
+      'Murid menentukan harga total barang menggunakan tabel rasio senilai.',
+    levelKognitif: 'L3',
     bobotSkor: 1,
   },
   25: {
     elemen: 'Pengukuran',
-    tujuanPembelajaran:
-      'Peserta didik dapat menggunakan laju konsumsi bahan bakar per liter untuk menghitung kebutuhan dan jarak tempuh.',
+    tujuanPembelajaran: 'TP2.4 Menentukan rasio satuan',
     indikatorSoal:
-      'Disajikan jarak tempuh mobil dengan sejumlah liter bensin, peserta didik dapat menentukan kebenaran (Benar/Salah) rasio satuan, kebutuhan bensin, dan jarak maksimal.',
-    levelKognitif: 'L2',
+      'Murid mengevaluasi perbandingan rasio satuan kecepatan dua kendaraan berbeda.',
+    levelKognitif: 'L3',
     bobotSkor: 1,
   },
   26: {
-    elemen: 'Pengukuran',
+    elemen: 'Bilangan',
     tujuanPembelajaran:
-      'Peserta didik dapat menentukan jarak sebenarnya dan rasio jarak antar kota dari peta berskala.',
+      'TP1.1 Memahami perkalian pecahan dengan bilangan asli',
     indikatorSoal:
-      'Disajikan gambar peta jalur tiga kota beserta skala 1 : 1.500.000, peserta didik dapat menentukan kebenaran (Benar/Salah) jarak sebenarnya dan rasio antar ruas jalan.',
+      'Murid menghitung hasil perkalian pecahan biasa dengan bilangan bulat.',
     levelKognitif: 'L2',
     bobotSkor: 1,
   },
   27: {
-    elemen: 'Aljabar',
+    elemen: 'Bilangan',
     tujuanPembelajaran:
-      'Peserta didik dapat menyelesaikan masalah pembagian uang berdasarkan rasio yang diketahui jumlahnya.',
+      'TP1.2 Memahami pembagian pecahan dengan bilangan asli',
     indikatorSoal:
-      'Disajikan rasio uang saku dua anak dan jumlah uang mereka, peserta didik dapat menentukan kebenaran (Benar/Salah) besar uang masing-masing dan selisihnya.',
-    levelKognitif: 'L1',
+      'Murid menghitung hasil pembagian pecahan dengan bilangan asli.',
+    levelKognitif: 'L2',
     bobotSkor: 1,
   },
   28: {
     elemen: 'Bilangan',
-    tujuanPembelajaran:
-      'Peserta didik dapat menafsirkan rasio campuran dari ilustrasi dan menerapkannya pada kelipatan takaran.',
+    tujuanPembelajaran: 'TP1.3 Mengubah pecahan menjadi desimal',
     indikatorSoal:
-      'Disajikan gambar aturan campuran cat merah dan putih, peserta didik dapat menentukan kebenaran (Benar/Salah) rasio terhadap total dan kebutuhan cat pada kelipatan tertentu.',
+      'Murid menuliskan bentuk desimal dari pecahan seperempat (1/4).',
     levelKognitif: 'L2',
     bobotSkor: 1,
   },
   29: {
-    elemen: 'Analisis Data dan Peluang',
+    elemen: 'Bilangan',
     tujuanPembelajaran:
-      'Peserta didik dapat menghitung rasio antar kategori data kegiatan siswa di kelas.',
+      'TP1.5 Membandingkan bilangan desimal sampai sepersepuluh',
     indikatorSoal:
-      'Disajikan data jumlah siswa kelas VI dan pilihan ekstrakurikulernya, peserta didik dapat menentukan kebenaran (Benar/Salah) jumlah sisa siswa dan rasio antar kegiatan.',
-    levelKognitif: 'L1',
+      'Murid menuliskan angka persepuluhan dari suatu bilangan desimal.',
+    levelKognitif: 'L2',
     bobotSkor: 1,
   },
   30: {
-    elemen: 'Pengukuran',
+    elemen: 'Aljabar',
     tujuanPembelajaran:
-      'Peserta didik dapat menganalisis rasio volume terhadap waktu (debit aliran) dalam pemecahan masalah.',
+      'TP2.1 Memahami konsep rasio dan penggunaan bahasa rasio',
     indikatorSoal:
-      'Disajikan volume air yang mengalir dalam waktu tertentu, peserta didik dapat menentukan kebenaran (Benar/Salah) debit per menit, volume pada waktu lain, dan waktu pengisian.',
+      'Murid menuliskan bentuk penulisan rasio yang benar (menggunakan tanda titik dua).',
+    levelKognitif: 'L1',
+    bobotSkor: 1,
+  },
+  31: {
+    elemen: 'Aljabar',
+    tujuanPembelajaran:
+      'TP2.2 Menentukan kesamaan rasio menggunakan tabel rasio',
+    indikatorSoal:
+      'Murid melengkapi nilai pada tabel rasio senilai dalam pembuatan sirup.',
+    levelKognitif: 'L3',
+    bobotSkor: 1,
+  },
+  32: {
+    elemen: 'Aljabar',
+    tujuanPembelajaran:
+      'TP2.3 Menentukan rasio bagian terhadap keseluruhan',
+    indikatorSoal:
+      'Murid menuliskan rasio jumlah siswa perempuan terhadap total siswa kelas.',
+    levelKognitif: 'L2',
+    bobotSkor: 1,
+  },
+  33: {
+    elemen: 'Aljabar',
+    tujuanPembelajaran: 'TP2.4 Menentukan rasio satuan',
+    indikatorSoal:
+      'Murid menghitung harga 1 buah buku berdasarkan rasio satuan harga total.',
+    levelKognitif: 'L3',
+    bobotSkor: 1,
+  },
+  34: {
+    elemen: 'Bilangan',
+    tujuanPembelajaran: 'TP1.4 Mengubah pecahan menjadi desimal',
+    indikatorSoal:
+      'Murid menuliskan bentuk desimal dari pecahan tiga per delapan atau sejenisnya.',
+    levelKognitif: 'L2',
+    bobotSkor: 1,
+  },
+  35: {
+    elemen: 'Aljabar',
+    tujuanPembelajaran:
+      'TP2.3 Menentukan rasio bagian terhadap bagian',
+    indikatorSoal:
+      'Murid menentukan rasio jumlah kelereng merah terhadap kelereng hijau.',
+    levelKognitif: 'L2',
+    bobotSkor: 1,
+  },
+  36: {
+    elemen: 'Bilangan',
+    tujuanPembelajaran:
+      'TP1.1 & TP1.2 Perkalian & Pembagian Pecahan Kontekstual',
+    indikatorSoal:
+      'Murid menghitung total berat gula pasir dalam kantong plastik pecahan.',
+    levelKognitif: 'L3',
+    bobotSkor: 1,
+  },
+  37: {
+    elemen: 'Bilangan',
+    tujuanPembelajaran:
+      'TP1.3 & TP1.5 Konversi Pecahan & Urutan Desimal',
+    indikatorSoal:
+      'Murid mengurutkan data berat badan hasil pengukuran desimal dan pecahan.',
+    levelKognitif: 'L3',
+    bobotSkor: 1,
+  },
+  38: {
+    elemen: 'Aljabar',
+    tujuanPembelajaran:
+      'TP2.1 & TP2.3 Konsep Rasio Bagian dan Keseluruhan',
+    indikatorSoal:
+      'Murid menghitung jumlah siswa laki-laki berdasarkan rasio bagian terhadap keseluruhan.',
+    levelKognitif: 'L3',
+    bobotSkor: 1,
+  },
+  39: {
+    elemen: 'Aljabar',
+    tujuanPembelajaran:
+      'TP2.2 & TP2.4 Tabel Rasio dan Rasio Satuan',
+    indikatorSoal:
+      'Murid menyelesaikan masalah resep kue menggunakan tabel kesamaan rasio.',
+    levelKognitif: 'L3',
+    bobotSkor: 1,
+  },
+  40: {
+    elemen: 'Pengukuran',
+    tujuanPembelajaran: 'TP2.4 Menentukan rasio satuan kecepatan',
+    indikatorSoal:
+      'Murid menghitung perbandingan rasio satuan kecepatan tempuh kendaraan bermotor.',
     levelKognitif: 'L3',
     bobotSkor: 1,
   },
@@ -390,16 +473,10 @@ export function getQuestionBlueprint(q: Question, index: number): QuestionBluepr
 
 function inferElemenFromTopic(topic: string): string {
   const t = topic.toLowerCase();
-  if (t.includes('skala') || t.includes('debit') || t.includes('satuan berbeda') || t.includes('kecepatan') || t.includes('bahan bakar')) {
+  if (t.includes('kecepatan') || t.includes('waktu & jarak')) {
     return 'Pengukuran';
   }
-  if (t.includes('grid') || t.includes('bangun') || t.includes('denah')) {
-    return 'Geometri';
-  }
-  if (t.includes('diagram') || t.includes('data')) {
-    return 'Analisis Data dan Peluang';
-  }
-  if (t.includes('konsep dasar') || t.includes('penyederhanaan') || t.includes('bagian terhadap keseluruhan') || t.includes('volume') || t.includes('warna')) {
+  if (t.includes('pecahan') || t.includes('desimal')) {
     return 'Bilangan';
   }
   return 'Aljabar';

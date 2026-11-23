@@ -1186,7 +1186,7 @@ export const Stage4TeacherPanel: React.FC<Stage4TeacherPanelProps> = ({
                 Struktur &amp; Bank Soal Matematika — {CONFIG.MATERI} ({questions.length} Butir)
               </h3>
               <p className="text-xs text-slate-500">
-                18 Soal Pilihan Ganda, 3 Soal Pilihan Ganda Kompleks (4 Opsi), 9 Soal PGK Kategori
+                26 Soal Pilihan Ganda (4 Opsi), 5 Soal Pilihan Ganda Kompleks (3 Opsi), 9 Soal PGK Kategori
               </p>
             </div>
             <div className="flex flex-wrap items-center gap-2">
@@ -1196,17 +1196,17 @@ export const Stage4TeacherPanel: React.FC<Stage4TeacherPanelProps> = ({
                   onClick={() => {
                     if (
                       confirm(
-                        'Kembalikan seluruh bank soal ke 30 butir standar (18 PG, 3 PGK, 9 PGK Kategori)?'
+                        'Kembalikan seluruh bank soal ke 40 butir standar (26 PG, 5 PGK, 9 PGK Kategori)?'
                       )
                     ) {
                       onResetDefaultQuestions();
                     }
                   }}
                   className="inline-flex items-center gap-1.5 px-3 py-2 text-xs font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-xl transition-colors border border-slate-300 cursor-pointer"
-                  title="Reset seluruh soal ke 30 butir standar Kurikulum Merdeka"
+                  title="Reset seluruh soal ke 40 butir standar Kurikulum Merdeka"
                 >
                   <RotateCcw className="w-3.5 h-3.5 text-slate-600" />
-                  <span>Reset ke 30 Soal Standar</span>
+                  <span>Reset ke 40 Soal Standar</span>
                 </button>
               )}
               <button
